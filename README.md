@@ -36,11 +36,3 @@ Before you begin, ensure you have the following installed:
 * **Maven 3.6.0 or higher:** [Download Maven](https://maven.apache.org/download.cgi)
 * **Node.js 18.x or higher:** [Download Node.js](https://nodejs.org/en/download/) (includes npm).
 * **Git:** [Download Git](https://git-scm.com/downloads) (if cloning from a repository).
-
-### 1. Clone the Repository (if applicable)
-
-If your code is in a Git repository, clone it:
-
-```bash
-git clone <your-repository-url>
-cd loan-managemt # Or whatever your root project folder is named
