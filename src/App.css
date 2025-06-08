@@ -1,0 +1,88 @@
+/* Basic reset to ensure consistent box-sizing */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #282c34; /* This is your dark background color from the image */
+  color: #e0e0e0; /* A light grey for general text on dark background */
+}
+
+/* Styles for the main App container */
+.App {
+  text-align: center;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Align content from the top */
+  background-color: #282c34; /* Ensure consistent background */
+  color: #e0e0e0; /* Main text color for the App */
+}
+
+/* Styles for the white content boxes (LoanForm and LoanList items) */
+/* The background-color is set in the component's inline style,
+   but we can set a default text color for contents within them */
+.App h1,
+.App h2 {
+  color: #333; /* Darker color for headings on light backgrounds */
+}
+
+.App p,
+.App label,
+.App strong {
+  color: #555; /* A slightly darker grey for normal text on light backgrounds */
+}
+
+/* Specific adjustments for input fields if needed */
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+    color: #333; /* Ensure input text is dark */
+    background-color: #f0f0f0; /* Light background for inputs */
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+/* Adjust labels for visibility, as they seem hidden in your form image */
+label {
+    display: block; /* Make labels take full width so text appears above input */
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333; /* Ensure labels are dark and visible */
+    text-align: left; /* Align label text to the left */
+}
+
+
+/* Styling for the form's containing div (to give padding and set overall text color for form) */
+.App > div { /* This targets the direct children divs of App (LoanForm and LoanList's root div) */
+    background-color: white;
+    color: #333; /* Default text color for contents inside these white boxes */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 90%; /* Adjust width as needed */
+    max-width: 600px; /* Max width for readability */
+}
+
+/* Make sure the Loan List items are visible */
+.App ul li {
+    color: #333; /* Default text color for list items */
+}
+
+/* Specific color for the error message */
+.App p[style*="color: red"] {
+    color: red !important; /* Ensure error messages are clearly red */
+}
